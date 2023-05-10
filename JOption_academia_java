@@ -1,0 +1,63 @@
+package exercicio1;
+
+import java.text.DecimalFormat;
+import javax.swing.JOptionPane;
+
+public class prova_10_05{
+
+    public static void main(String[] args) {
+        
+        float imc = 0;
+        String nomeAluno = "", musculacao = "", todosExercicios = "";
+        int caloriasaseremGastas = 0, valorPlano = 0, desconto = 0;
+        float valorPagar = 0;
+        
+        nomeAluno = (JOptionPane.showInputDialog(null, "Informe o seu nome: "));
+        int peso = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe o seu peso: "));
+        float altura = Float.parseFloat(JOptionPane.showInputDialog(null, "Informe sua altura: "));
+        caloriasaseremGastas = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe a quantidade de calorias a serem gastas"));
+        
+        imc = peso / (altura * altura);
+        
+        if(caloriasaseremGastas <= 450){
+            musculacao = "Musculação:450 calorias";
+            valorPagar = 80;
+            
+        }else if(caloriasaseremGastas <= 1850){
+            todosExercicios = "Musculação:450 calorias\nCorrida:1400 calorias";
+            valorPagar = 100;
+            
+        }else if(caloriasaseremGastas <= 3999){
+	    todosExercicios = "Musculação:450 calorias\nCorrida:1400 calorias\nBicicleta Ergonomica";
+		valorPagar = 100;
+                
+        }else if(caloriasaseremGastas >= 4000){
+	    todosExercicios = "Musculação:450 calorias\nCorrida:1400 calorias\nBicicleta Ergonomica";
+            valorPagar = 65;     
+        }
+        
+        if(caloriasaseremGastas <= 450){
+            valorPlano = 80;
+			
+	}else if(caloriasaseremGastas <= 1850){
+            valorPlano = 100;
+				
+	}else if(caloriasaseremGastas <= 3999){
+            valorPlano = 130;
+			
+	}else if(caloriasaseremGastas >= 4000){
+            valorPlano = 130;
+            desconto = 65;
+	}
+        
+        DecimalFormat df=new DecimalFormat();
+        df.applyPattern("##.00");
+        JOptionPane.showMessageDialog(null, df.format(imc));
+        JOptionPane.showMessageDialog(null, "\nLista de exercicios:\n"+ musculacao+ todosExercicios);
+	JOptionPane.showMessageDialog(null, "\nValor do Plano: "+ valorPlano);
+	JOptionPane.showMessageDialog(null, "\nDesconto: "+ desconto);
+	JOptionPane.showMessageDialog(null, "\nValor a pagar: "+ valorPagar);
+    }
+}
+            
+      
