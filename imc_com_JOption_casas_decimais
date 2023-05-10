@@ -1,0 +1,22 @@
+package exercicio1;
+
+import java.text.DecimalFormat;
+import javax.swing.JOptionPane;
+
+public class prova_10_05{
+
+    public static void main(String[] args) {
+        
+        float imc = 0;
+        
+        int peso = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe o seu peso: "));
+        float altura = Float.parseFloat(JOptionPane.showInputDialog(null, "Informe sua altura: "));
+        
+        imc = peso / (altura * altura);
+        DecimalFormat df=new DecimalFormat();
+        df.applyPattern("##.00");
+        JOptionPane.showMessageDialog(null, df.format(imc));
+          }
+        }
+            
+      
