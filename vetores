@@ -1,0 +1,21 @@
+
+package javaapplication5;
+
+import javax.swing.JOptionPane;
+
+
+public class JavaApplication5 {
+
+    public static void main(String[] args) {
+        
+        float valores;
+        int numero = 1, posicao = 0;
+        
+        for(float i = 0; i < 5; i++){
+        valores = Float.parseFloat(JOptionPane.showInputDialog(null, "Informe o numero" + (numero ++) + ":"));
+        
+        }
+        
+    }
+    
+}
