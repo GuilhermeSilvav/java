@@ -10,12 +10,14 @@ public class Senha {
     public static void main(String[] args) {
         
         String senha = JOptionPane.showInputDialog("Criar senha: ");
-        String senhaDigitada = JOptionPane.showInputDialog("Digite a senha");
+        String senhaDigitada = "";
         
         do {
-            JOptionPane.showInputDialog("Voce nao acertou\n" + "Digite novamente: ");
+            senhaDigitada = JOptionPane.showInputDialog("Digite a senha");
             
-        }while (senhaDigitada.equals(senha));
+        }while (!senhaDigitada.equals(senha));
+        
+        JOptionPane.showMessageDialog(null, "Seja bem vindo!");
         
     }
 }
