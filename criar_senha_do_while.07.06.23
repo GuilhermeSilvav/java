@@ -1,0 +1,21 @@
+
+package javaapplication6;
+
+import javax.swing.JOptionPane;
+
+
+public class Senha {
+
+    
+    public static void main(String[] args) {
+        
+        String senha = JOptionPane.showInputDialog("Criar senha: ");
+        String senhaDigitada = JOptionPane.showInputDialog("Digite a senha");
+        
+        do {
+            JOptionPane.showInputDialog("Voce nao acertou\n" + "Digite novamente: ");
+            
+        }while (senhaDigitada.equals(senha));
+        
+    }
+}
