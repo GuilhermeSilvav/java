@@ -1,0 +1,30 @@
+package javaapplication1;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+        
+         String timeA = JOptionPane.showInputDialog("Informe o time: ");
+         String timeB = JOptionPane.showInputDialog("Informe o time: ");
+         
+         int resultadoTimea = Integer.parseInt(JOptionPane.showInputDialog("Quantos gols fez o : " + timeA));
+         
+         int resultadoTimeb = Integer.parseInt(JOptionPane.showInputDialog("Quantos gols fez o : " + timeB));
+         
+        if(resultadoTimea > resultadoTimeb){
+            JOptionPane.showMessageDialog(null, timeA + "venceu");
+         }    
+            if else (resultadoTimea < resultadoTimeb){
+                JOptionPane.showMessageDialog(null, timeB + "venceu"); 
+                }else(resultadoTimea == resultadoTimeb){
+                    JOptionPane.showMessageDialog(null, "Os times Empataram");
+    }
+    
+    }
+       
+    
+}
+        
