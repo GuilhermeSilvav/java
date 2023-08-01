@@ -1,0 +1,28 @@
+package javaapplication1;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+        
+        String[]timesGrupoA = new String[4];
+        String[]timesGrupoB = new String[4];
+        
+         for(int a = 0; a<4; a++){
+             
+             timesGrupoA[a] = JOptionPane.showInputDialog("Informe os times Grupo A: ");   
+         }
+         for(int a = 0; a<4; a++){
+             timesGrupoB[a] = JOptionPane.showInputDialog("Informe os times Grupo B: ");       
+         }
+         JOptionPane.showMessageDialog(null, "Times Grupo A: " 
+            +"\nTime 1: "+timesGrupoA[0]+ "\nTime 2: "+timesGrupoA[1]+ "\nTime 3: "+timesGrupoA[2]+ "\nTime 4: "+timesGrupoA[3]);   
+         
+         JOptionPane.showMessageDialog(null, "Times Grupo B: " 
+            +"\nTime 1: "+timesGrupoB[0]+ "\nTime 2: "+timesGrupoB[1]+ "\nTime 3: "+timesGrupoB[2]+ "\nTime 4: "+timesGrupoB[3]); 
+         
+    }
+    
+}        
