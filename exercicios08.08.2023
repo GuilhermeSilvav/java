@@ -1,0 +1,240 @@
+1.	
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+
+        //Variaveis tipo vetor
+
+        String[]timesGrupoA = new String[4];
+        String[]timesGrupoB = new String[4];
+
+        //Loop em for para realizar 4 perguntas onde resposta armazena no vetor os nomes dos 4 times do grupo A
+        
+
+         for(int a = 0; a<4; a++){
+             
+             timesGrupoA[a] = JOptionPane.showInputDialog("Informe os times Grupo A: ");
+             
+         }
+
+         //Loop em for para realizar 4 perguntas onde resposta armazena no vetor os nomes dos 4 times do grupo B
+
+         for(int a = 0; a<4; a++){
+             
+             timesGrupoB[a] = JOptionPane.showInputDialog("Informe os times Grupo B: ");
+             
+         }
+
+         //Impressão das respostas dos times que foram armazenadas nos vetores, usamos diretamente as posições nos vetores
+
+            JOptionPane.showMessageDialog(null, "Times Grupo A: " 
+                    +"\nTime 1: "+timesGrupoA[0]+ "\nTime 2: "+timesGrupoA[1]+ "\nTime 3: "+timesGrupoA[2]+ "\nTime 4: "+timesGrupoA[3]);   
+            JOptionPane.showMessageDialog(null, "Times Grupo B: " 
+                    +"\nTime 1: "+timesGrupoB[0]+ "\nTime 2: "+timesGrupoB[1]+ "\nTime 3: "+timesGrupoB[2]+ "\nTime 4: "+timesGrupoB[3]); 
+         
+    }
+    
+}
+2.
+package javaapplication2;
+
+import javax.swing.JOptionPane;
+
+
+public class JavaApplication2 {
+
+
+    public static void main(String[] args) {
+
+       
+        //Respostas usuário serão variáveis String
+
+        String timeA = JOptionPane.showInputDialog("Informe o time: ");
+        String timeB = JOptionPane.showInputDialog("Informe o time: ");
+
+        //Respostas usuário serão variáveis int
+
+        int resultadoTimea = Integer.parseInt(JOptionPane.showInputDialog("Quantos gols fez o : " + timeA));
+        int resultadoTimeb = Integer.parseInt(JOptionPane.showInputDialog("Quantos gols fez o : " + timeB));
+
+        //if comparando valor variáveis int, onde a verdade do resultado será informada
+
+        if (resultadoTimea > resultadoTimeb) {
+            JOptionPane.showMessageDialog(null, timeA + " venceu ");
+        }
+        if (resultadoTimea < resultadoTimeb) {
+            JOptionPane.showMessageDialog(null, timeB + " venceu ");
+        }else if (resultadoTimea == resultadoTimeb){
+            JOptionPane.showMessageDialog(null, " Os times Empataram ");
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+3. 
+int pesoFrutas = 0;
+	int contador = 0 ;
+	int balanca= 0;
+
+	//Loop limitado para perguntar 4 vezes ao usuario que informe peso das frutas
+
+	//Dentro loop do possui um if que armazenará na variável balancao maior valor
+
+        do {
+            pesoFrutas = Integer.parseInt(JOptionPane.showInputDialog("Informe o peso da fruta: "));
+            if(pesoFrutas > balanca){
+            balanca= pesoFrutas;
+            }
+            contador ++;
+        }while(contador < 4);
+
+     //Aqui o programa informará o maior peso imprimindo o valor maior que foi armazenado na variável de nome balanca
+
+        JOptionPane.showMessageDialog(null, "A fruta com maior peso tem: "  + balanca);
+  	}
+    }
+
+4.  
+Object[] atividade = {"Bicicleta Ergometrica", "Esteira Caminhada", "Esteira Corrida", "Musculação", "Dança", "Croos Fit"};
+
+        //Aqui a escolha do exercício pelo usuário será inserida na variável "Object selectedExercicio"
+
+        Object selectedExercicio = JOptionPane.showInputDialog(null, "Escolha seu Exercicio", "Exercicio", JOptionPane.INFORMATION_MESSAGE,null, atividade, atividade[0]);
+    
+        //Aqui a variável "String Exercicio" será inicializada com aescolha do usuário no código acima, onde foi inserido na variável "selectedExercicio"
+
+        String Exercicio =(String) selectedExercicio;
+
+        //Aqui o switch possui as cases com as Strings que correspondem ao exercicio que foi escolhido e imprimirá os valores nas respostas
+
+        String Atividades = switch (Exercicio){
+            case "Bicicleta Ergometrica" ->
+                "Sua perda de calorias sera de 200 em 30 minutos.";
+
+            case "Esteira Caminhada" ->
+                "Sua perda de calorias sera de 300 em 30 minutos.";
+                
+            case "Esteira Corrida" ->
+                "Sua perda de calorias sera de 400 em 30 minutos.";
+                
+            case "Musculação" ->
+                "Sua perda de calorias sera de 220 em 30 minutos.";
+                
+            case "Dança" ->
+                "Sua perda de calorias sera de 260 em 30 minutos.";
+            case "Croos Fit" ->
+                "Sua perda de calorias sera de 800 em 30 minutos.";
+               
+                            
+            default -> ""; 
+        }   ;
+
+        JOptionPane.showMessageDialog(null, Atividades);
+    }
+}
+        
+    
+
+5.
+package alunoseg.java;
+
+import static java.util.Arrays.equals;
+import javax.swing.JOptionPane;
+
+/**Criar um algoritmo com array que receba o nome de aluno, e 3 notas, ao fim gere sua média e mostre:
+
+o nome do aluno
+a média
+e todas as notas.
+pergunte se deseja continuar, (while)
+
+ao final pode armazenar até: 
+
+10 alunos guardar nome no array
+
+10 médias
+
+30 notas 
+ *
+ * @author jonatas_g_santos
+ */
+public class AlunoSegJava {
+
+    public static void main(String[] args) {
+        
+        // Variáveis em vetor do tipo String e float iniciadas com array de 10 e uma float com 30
+        
+        String[] nomeAluno = new String[10];
+        float[] notasAluno = new float[30];
+        float[] mediaAluno = new float[10];
+        
+        //Variáveis float, int e String iniciadas com valor 0 e String em branco
+        
+        float media = 0;
+        float mediaCalculada = 0;
+        int contNota = 0;
+        int contNota2 = 0;
+        String continuar = "";
+        
+        //Do While para fazer todo o processo de armazenamento de dados, nomes, notas
+        
+        do {
+            for (int i = 0; i < 1; i++) {
+                nomeAluno[i] = JOptionPane.showInputDialog("Informe o nome do aluno: ");
+
+                for (int j = 0; j < 3; j++) {
+                    notasAluno[contNota] = Float.parseFloat(JOptionPane.showInputDialog("Informe a nota do aluno: "));
+                    media += notasAluno[contNota];
+                    contNota++;
+                }
+                
+                //Variáveis inicializadas de média
+                
+                mediaCalculada = media / 3;
+                mediaAluno[i] = mediaCalculada;
+                media = 0;
+            }
+            
+            //for para impressão dos dados incluidos nos vetores usando o contador
+            
+            contNota = 0;
+            for (int i = 0; i < 1; i++) {
+                System.out.println("Nome do aluno: " + nomeAluno[i]);
+
+                for (int z = 0; z < 3; z++) {
+                    System.out.println("Notas do aluno: " + notasAluno[contNota]);
+                    contNota++;
+                }
+                for (int t = 0; t < 1; t++) {
+                    System.out.println("Média do aluno: " + mediaAluno[contNota2]);
+                    contNota2++;
+                }
+            }
+            
+            continuar = JOptionPane.showInputDialog("Deseja continuar? S ou N").toUpperCase();
+             
+            //While irá continuar caso resposta seja igual S ou s pois UpperCase transforms em alt s
+            
+        } while (continuar.equals("S"));
+
+    }
+}
+
+
+
+
+
+
+
