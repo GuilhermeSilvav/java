@@ -1,0 +1,33 @@
+        float ingressosInteiros = 22.00f;
+        double ingressosDesconto = 11.00d;
+        String resposta = "";
+        String[] nomesCliente = new String[99];
+        int cont = 0, cont2 = 0;
+        int[] idadeCliente = new int[99];
+        
+        do{
+        
+            nomesCliente[cont] = JOptionPane.showInputDialog("Informe nome cliente: ");
+            cont++;
+            idadeCliente[cont2] = Integer.parseInt(JOptionPane.showInputDialog("Informe a idade do cliente: "));
+            cont2++;
+      
+        for(int a = 0; a<cont; a++){
+        
+        if (idadeCliente[a] <=12 || idadeCliente[a] >=60){
+            
+            JOptionPane.showMessageDialog(null, "Nomes: "+nomesCliente[a] + "\nIdade: " + idadeCliente[a] +"\nValor R$: " +ingressosDesconto); 
+            
+            }else{
+        
+       
+JOptionPane.showMessageDialog(null, "Nomes: "+nomesCliente[a] + "\nIdade: " + idadeCliente[a] +"\nValor R$: " +ingressosInteiros);
+        }
+        }
+        resposta = JOptionPane.showInputDialog("Deseja continuar(Sim/Não)?: ").toUpperCase();
+        }while(resposta.equals("SIM")); 
+    }
+    
+}
+
+
