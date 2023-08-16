@@ -1,0 +1,48 @@
+package javaapplication2;
+
+import javax.swing.JOptionPane;
+
+
+public class JavaApplication2 {
+
+    public static void main(String[] args) {
+        
+        int turma = 0, resposta = 0;
+        
+        do{
+            String relatorio = "", situacao = "";
+            int x = 0;
+            float nota, totalNotas = 0.0f;
+            
+            turma =Integer.parseInt(JOptionPane.showInputDialog("Informe quantos alunos tem na turma: "));
+            float[]media = new float[turma];
+            String[]nomeAluno = new String[turma];
+            for(int i = 0; i < turma; i ++){
+                nomeAluno[i] =JOptionPane.showInputDialog("Informe o nome do Aluno "+(i+1)+":");
+                for(int j = 0; j < 3; j ++){
+                    nota = Float.parseFloat(JOptionPane.showInputDialog("Informe a nota " + (j+1)+ ":"));
+                    totalNotas += nota;
+                }
+            media[i]= totalNotas / 3;
+            totalNotas = 0.0f;
+            } 
+        //for para ler e montar o relatório
+        for (int i = 0; i < turma;i++){
+            
+            if(media[i] >= 7){
+            situacao = "Aprovado";
+        }
+        if (media[i] >=6 && media[i] < 7){
+            situacao = "Em exame";
+        } else if(media[i] < 6){
+            situacao = "Reprovado";
+        }
+        relatorio += "Aluno: "+ nomeAluno[i]+"\nMedia: "+media[i]+ "Status: " +situacao+"\n";
+        }
+        JOptionPane.showMessageDialog(null, relatorio);
+
+        resposta = Integer.parseInt(JOptionPane.showInputDialog("Informe se deseja encerrar o programa (1/SIm)ou(2/Nao"));
+        }while(resposta ==1);
+        
+    }
+}
