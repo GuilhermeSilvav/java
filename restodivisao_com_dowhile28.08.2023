@@ -1,0 +1,31 @@
+
+package javaapplication2;
+
+import javax.swing.JOptionPane;
+
+
+public class JavaApplication2 {
+
+   
+    public static void main(String[] args) {
+        
+        int numero, cont=0;
+        double soma = 0, quadrado;
+        
+        do{
+            numero =Integer.parseInt(JOptionPane.showInputDialog("Informe um numero maior que 0 e menor que 10"));
+        }while(numero <= 0 || numero >=10);
+        
+        do{
+            if(numero % 2 != 0){
+                quadrado = Math.pow(numero,2);
+                soma+= quadrado;
+                cont++;
+                System.out.println(cont+" o valor "+numero+" elevado ao quadrado = "+quadrado+""
+                        + " soma dos quadrados: "+soma);
+            }
+            numero++;
+        }while(cont <20);
+    }
+    
+}
