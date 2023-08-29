@@ -1,0 +1,20 @@
+
+package javaapplication3;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+
+public class JavaApplication3 {
+
+    
+    public static void main(String[] args) {
+        
+        String fraseDoDia = JOptionPane.showInputDialog("Digite a frase do dia: ");
+        
+        JOptionPane.showMessageDialog(null, "Frase do dia sem trim: "+ fraseDoDia);
+        
+        JOptionPane.showMessageDialog(null, "Frase do dia sem trim: "+ fraseDoDia.trim());
+    }
+    
+}
