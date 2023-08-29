@@ -1,0 +1,40 @@
+
+package javaapplication3;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+
+public class JavaApplication3 {
+
+    
+    public static void main(String[] args) {
+        
+        String[] nome = {"Maria Silva","Pedro Pedroso","Vitória Luiz","Lucia Pereira","Luiz Souza"};
+        
+        String sobrenome;
+        String nomeSolicitado;
+        Scanner ler = new Scanner(System.in);
+        String string1 = "Hellho how are you?";
+        System.out.println(string1.startsWith("Hello"));
+        System.out.println(string1.endsWith("you"));
+        int cont = 0;
+        
+        sobrenome = JOptionPane.showInputDialog("Informe o sobrenome:");
+        for(int i = 0; i <5; i++){
+            if(nome[i].endsWith(sobrenome)){
+                System.out.println("Nome: " +nome[i]);
+            }
+        }
+        
+        for(int j = 0; j <9;j++){
+            if(sobrenome.startsWith(nome[j])) {
+            }
+        if()
+            System.out.println("SObrenome invalido"); 
+        
+        
+        }     
+    }
+    
+}
