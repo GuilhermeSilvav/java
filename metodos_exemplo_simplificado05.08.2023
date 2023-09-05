@@ -1,0 +1,16 @@
+
+package aula_metodos_05.pkg09.pkg2023;
+
+
+public class Aula_metodos_05092023 {
+
+   
+    public static void imprimir() {
+        System.out.println("Aprendendo a linguagem Java!");
+        
+    }
+    public static void main(String[] args) {
+        imprimir();
+    }
+    
+}
