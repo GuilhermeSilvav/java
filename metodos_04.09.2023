@@ -1,0 +1,39 @@
+
+package aula_04_09_exercicio2;
+
+public class Aula_04_09_exercicio2 {
+
+    public static void Imprimir() {
+        System.out.println("Aprendendo linguagem java ");
+    }
+
+    public static void ImprimirTexto(String texto) {
+        System.out.println(texto);
+    }
+
+    public static void Somar(int a, int b) {
+        System.out.println("A Soma de " + a + " + " + b + " é: " + (a + b));
+    }
+
+    public static void Quadrado(int a) {
+        System.out.println(Math.pow(a, 2));
+    }
+
+    public static void maior(int a, int b, int c) {
+        System.out.println(Math.max(a, Math.max(b, b)));
+    }
+
+    public static void Sexo(char a) {
+        a = Character.toUpperCase(a);
+        switch (a) {
+            case 'F' ->
+                System.out.println("Feminino");
+            case 'M' ->
+                System.out.println("Masculino");
+            default ->
+                System.out.println("Desconhecido");
+        }
+    }
+
+}
+
