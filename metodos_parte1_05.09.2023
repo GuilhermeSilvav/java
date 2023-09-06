@@ -1,0 +1,34 @@
+
+package aula_metodos_05.pkg09.pkg2023;
+
+import javax.swing.JOptionPane;
+
+
+public class Aula_metodos_05092023 {
+
+    public static void main(String[] args) {
+        
+    
+        Object[] lista = {"Cadastrar Numeros", "Listar Numeros",
+            "Numeros`Pares", "Numeros Impares", "Numeros pares posicao impar"+ "",
+            "Numeros impares posicao par", "Sair"};
+        Object opLista = JOptionPane.showInputDialog(null, "Escolha uma opcao",
+                "Lista de opções",  JOptionPane.INFORMATION_MESSAGE, null, lista, lista[0]);
+        
+        String opcao = (String) opLista;
+        switch (opcao){
+            case "Cadastrar Numeros" -> cadastrarNumeros();
+            case "Listar Numeros" -> listarNumeros();
+            case "Numeros Pares" -> listarNumerosPares();
+            case "Numeros Impares" -> listarNumerosImpares();
+            case "Numeros pares posicao Impar" -> ListarNumerosParesPosicaoImpar();
+            case "Numeros impares posicao par" -> ListarNumerosImparesPosicaoPar();
+            case "Sair" -> JOptionPane.showMessageDialog(null,"Até logo");
+            
+            default -> digitarValorValido();
+
+        }
+    }       
+}
+
+
