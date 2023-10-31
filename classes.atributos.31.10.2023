@@ -48,3 +48,15 @@ public class Animal {
  
     
 }
+package animal;
+
+public class Cachorro {
+    
+    String raca;
+    String pelo;
+    
+    public static void main(String[] args) {
+        
+        Animal cao = new Animal("Black", "Canina", "Preto", 17, 1);
+        Animal cao2 = new Animal("Bob", "Canina");
+    }
